@@ -27,6 +27,7 @@ public class Router {
 		Spark.get("/proyectos", proyectosController::listar, engine);
 		Spark.get("/proyectos/new", proyectosController::nuevo, engine);
 		Spark.get("/proyectos/:id", proyectosController::mostrar, engine);
+		Spark.post("/", HomeController::accederDesdeLogin);
 		Spark.post("/proyectos", proyectosController::crear);
 	}
 

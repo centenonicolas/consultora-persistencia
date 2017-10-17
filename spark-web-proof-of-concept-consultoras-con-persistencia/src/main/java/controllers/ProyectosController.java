@@ -45,4 +45,6 @@ public class ProyectosController implements WithGlobalEntityManager, Transaction
 		res.redirect("/proyectos");
 		return null;
 	}
+	
+	
 }

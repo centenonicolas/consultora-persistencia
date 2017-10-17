@@ -12,4 +12,14 @@ public class HomeController {
 		return new ModelAndView(null, "home/login.hbs");
 	}
 	
+	public static Void accederDesdeLogin(Request req, Response res){
+		
+		if(req.queryParams("user").equals("Nick")){
+			System.out.println("recibido");
+			res.redirect("/proyectos");
+		}else res.redirect("/");
+		
+		//return new ModelAndView(null, "home/home.hbs");
+		return null;
+	}
 }
